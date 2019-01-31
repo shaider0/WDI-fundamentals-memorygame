@@ -1,7 +1,25 @@
-var cardOne = "queen";
-var cardTwo = "queen";
-var cardThree = "king";
-var cardFour= "king";
+var cards = [
+"queen",
+"queen",
+"king",
+"king"
+]
 
-console.log("User picked " + cardOne);
-console.log("User picked " + cardTwo);
+var cardsInPlay = [];
+
+var cardOne = cards[0];
+cardsInPlay.push(cardOne);
+console.log("The user picked " + cardOne);
+
+var cardTwo = cards[2];
+cardsInPlay.push(cardTwo);
+console.log("The user picked " + cardTwo);
+
+if (cardsInPlay.length===2){
+	if(cardsInPlay[0]===cardsInPlay[1]){
+		alert("You found a match!");
+	}
+	else{
+		alert("Sorry, try again");
+	}
+}
