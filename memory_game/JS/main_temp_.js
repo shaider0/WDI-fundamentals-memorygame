@@ -12,7 +12,6 @@ var cardsInPlay = [];
 //function to add cards to the game board HTML using DOM manipulation
 var createBoard = function() {
 
-//define flipCard function first
 	var flipCard = function(){
 
 		var cardId = this.getAttribute("data-id");
@@ -46,6 +45,16 @@ var createBoard = function() {
 
 createBoard();
 
-document.getElementsByTagName("button")[0].addEventListener("click", function(){
-	location.reload();
-})
+var button = document.querySelector("button"); 
+
+var reset = function() {
+
+	for (var i=0; i<cardsInPlay.length; i++){
+	var image = document.getElementsByTagName("img");
+	image.remove();
+	}
+
+	cardsInPlay = [];
+}
+
+button.addEventListener("click", reset);

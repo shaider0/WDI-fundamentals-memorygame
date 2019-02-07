@@ -98,3 +98,14 @@ main {
 img {
 	margin: 40px 8px 0 8px;
 }
+
+button {
+	background: #00A6B3;
+	color: white;
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 15px;
+	text-transform: uppercase;
+	font-family: Raleway, Sans-Serif;
+}
