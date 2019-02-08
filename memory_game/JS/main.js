@@ -9,6 +9,10 @@ var cards = [
 //empty array of cards in play
 var cardsInPlay = [];
 
+currentScore = 0; 
+var score = document.querySelector("#score");
+
+
 //function to add cards to the game board HTML using DOM manipulation
 var createBoard = function() {
 
@@ -23,12 +27,15 @@ var createBoard = function() {
 
 		var checkForMatch = function(){
 
-			if (cardsInPlay.length===2){
+			if (cardsInPlay.length%2===0){
 				if(cardsInPlay[0]===cardsInPlay[1]){
 					alert("You found a match!");
+					currentScore += 1; 
+					score.innerHTML = currentScore;
 				}
 				else{
 					alert("Sorry, try again");
+
 				}
 			}
 		}
